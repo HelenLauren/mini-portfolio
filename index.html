@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helen Lauren | Portfolio</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <h1 class="logo">Helen Lauren</h1>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#extras">Extras</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h2>IT Intern & Web Developer</h2>
+    </div>
+</section>
+
+<section id="about" class="section white">
+    <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <p>
+            Hello! My name is Helen Lauren Bonato, I'm 20 years old and I'm from Brazil. Im currently pursuing a degree in System Information at PUCPR. My main interests are web development, mobile applications and automations. I love learning new things at every area possible, and I believe that technology can make our lives easier and more enjoyable.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title center">Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C#</div>
+            <div class="skill">ASP.NET</div>
+            <div class="skill">SQL</div>
+        </div>
+    </div>
+</section>
+
+<section id="extras" class="section white">
+    <div class="container">
+        <h2 class="section-title center">Extras ✨</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="hobbies">Hobbies</button>
+            <button class="tab-btn" data-tab="pokemon">Fav Pokémon</button>
+            <button class="tab-btn" data-tab="countries">Fav Countries</button>
+        </div>
+
+        <!-- TAB CONTENTS -->
+        <div id="hobbies" class="tab-content show grid-list">
+            <div class="grid-item">Draw and paint</div>
+            <div class="grid-item">Travel</div>
+            <div class="grid-item">Read books</div>
+            <div class="grid-item">Play cozy games</div>
+            <div class="grid-item">Collect trinkets (TCG, coins, cans, miniatures)</div>
+        </div>
+
+        <div id="pokemon" class="tab-content grid-list">
+            <div class="grid-item">Sylveon</div>
+            <div class="grid-item">Meowstic</div>
+            <div class="grid-item">Mew</div>
+            <div class="grid-item">Ditto</div>
+            <div class="grid-item">Goodra</div>
+            <div class="grid-item">Meloetta</div>
+        </div>
+
+        <div id="countries" class="tab-content grid-list">
+            <div class="grid-item">Italy</div>
+            <div class="grid-item">Japan</div>
+            <div class="grid-item">Switzerland</div>
+            <div class="grid-item">Canada</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container center">
+        <h2 class="section-title">Contact</h2>
+        <a href="mailto:helenbonato02@gmail.com" class="email">
+            helenbonato02@gmail.com
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 — Helen Lauren
+</footer>
+
+<script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('show'));
+
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('show');
+        });
+    });
+</script>
+
+</body>
+</html>
